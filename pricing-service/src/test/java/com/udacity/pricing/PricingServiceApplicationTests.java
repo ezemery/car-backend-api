@@ -35,7 +35,7 @@ public class PricingServiceApplicationTests {
 
 	@Test
 	public void findPrice() throws Exception {
-		mvc.perform(get("/services/price/1"))
+		mvc.perform(get("/services/price").param("vehicleId", "1"))
 				.andExpect(status().isOk());
 
 	}
